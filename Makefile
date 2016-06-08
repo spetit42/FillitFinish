@@ -38,7 +38,7 @@ $(NAME): $(SRCS_O)
 			@$(CC) $(CC_FLAGS) -o $(NAME) $^ -I . $(LIBFT)
 			@echo "$(NAME) as been successfuly done :)"
 
-%.o: $(SRC_DIR)%.c
+%.o: %.c
 	@$(CC) $(CC_FLAGS) -I$ . -o $@ -c $< $(I_LIBFT)
 
 clean:
