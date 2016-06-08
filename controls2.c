@@ -14,10 +14,12 @@
 
 int		check_and_add(char *buff, int coor, t_tetri *tab, char lettre)
 {
-	int i;
+	int		i;
+	t_pts	pt;
 
+	pt = ft_initialize();
 	buff[21] = '\0';
-	tab[coor] = ft_check_tetri(tab[coor], buff);
+	tab[coor] = ft_check_tetri(tab[coor], buff, pt);
 	tab[coor].letter = lettre;
 	if (buff[20] == '\n')
 		i = 1;

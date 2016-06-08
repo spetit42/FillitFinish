@@ -64,7 +64,7 @@ void			ft_check_and_parse(char **argv, t_tetri *tab, char lettre,
 				int *coor);
 void			ft_null_table(t_tetri *tab);
 t_pts			ft_initialize(void);
-t_tetri			ft_check_tetri(t_tetri tab, char *buff);
+t_tetri			ft_check_tetri(t_tetri tab, char *buff, t_pts pt);
 int				ft_check_diese(char *buff, int position);
 t_tetri			ft_get_place(int place, t_tetri tab, int i);
 t_tetri			*ft_list_push_left(t_tetri *tab);

@@ -38,11 +38,8 @@ void	ft_check_and_parse(char **argv, t_tetri *tab, char lettre, int *coor)
 	tab = ft_list_push_left(tab);
 }
 
-t_tetri	ft_check_tetri(t_tetri tab, char *buff)
+t_tetri	ft_check_tetri(t_tetri tab, char *buff, t_pts pt)
 {
-	t_pts pt;
-
-	pt = ft_initialize();
 	while (buff[++pt.i] != '\0')
 	{
 		if (buff[pt.i] == '.')
@@ -60,6 +57,8 @@ t_tetri	ft_check_tetri(t_tetri tab, char *buff)
 				ft_exit();
 			pt.l++;
 		}
+		else
+			ft_exit();
 	}
 	if (pt.j != 12 || pt.k != 4 || pt.l < 4 || pt.m < 6)
 		ft_exit();
